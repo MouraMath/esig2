@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Listagem de Salários</title>
+</h:head>
+<h:body>
+    <h1>Listagem de Salários</h1>
+
+    <p:dataTable var="salario" value="#{salarioController.listarSalarios()}" emptyMessage="Nenhum salário encontrado">
+        <p:column headerText="Pessoa">
+            #{salario.pessoa.nome}
+        </p:column>
+        <p:column headerText="Cargo">
+            #{salario.cargo.nome}
+        </p:column>
+        <p:column headerText="Salário">
+            #{salario.salario}
+        </p:column>
+    </p:dataTable>
+</h:body>
+</html>
